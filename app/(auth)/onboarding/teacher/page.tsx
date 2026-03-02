@@ -13,23 +13,23 @@ export default function TeacherOnboardingPage() {
           >
             Trang chủ
           </Link>
-          <p className="text-xs text-slate-500">
-            Thiết lập hồ sơ giáo viên · 1 bước
-          </p>
+            <p className="text-xs text-slate-500">
+              Thiết lập hồ sơ giáo viên · 1 bước
+            </p>
         </header>
 
         <div className="space-y-6 rounded-3xl border border-sky-100 bg-white p-6 shadow-xl shadow-sky-100 md:p-8">
           <div className="space-y-3">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-sky-700">
-              Onboarding giáo viên
+              Hướng dẫn ban đầu cho giáo viên
             </p>
             <h1 className="text-2xl font-semibold">
               Hoàn thiện hồ sơ để học viên hiểu rõ phong cách của bạn
             </h1>
             <p className="text-sm text-slate-600">
-              Thông tin này được dùng cho profile công khai, Matching Engine và
-              Marketing Assistant để gợi ý nội dung, từ khoá và nhóm học viên
-              phù hợp.
+              Thông tin này được dùng cho hồ sơ công khai, bộ máy ghép đôi AI và
+              Trợ lý Marketing để gợi ý nội dung, từ khoá và nhóm học viên phù
+              hợp.
             </p>
           </div>
 
@@ -47,7 +47,7 @@ export default function TeacherOnboardingPage() {
             </div>
             <div className="space-y-1.5 text-sm">
               <label className="block text-slate-700" htmlFor="styles">
-                Style yoga chính
+                Phong cách yoga chính
               </label>
               <input
                 id="styles"
@@ -68,12 +68,12 @@ export default function TeacherOnboardingPage() {
           </form>
 
           <div className="flex items-center justify-between border-t border-sky-100 pt-4 text-xs text-slate-600">
-            <p>Profile có thể được chỉnh sửa lại trong Teacher Dashboard.</p>
+            <p>Hồ sơ có thể được chỉnh sửa lại trong bảng điều khiển giáo viên.</p>
             <Link
               href="/dashboard/teacher"
               className="inline-flex items-center justify-center rounded-full bg-sky-500 px-5 py-2 text-sm font-semibold text-white shadow-md shadow-sky-200 hover:bg-sky-400"
             >
-              Lưu và vào Teacher Dashboard →
+              Lưu và vào bảng điều khiển giáo viên →
             </Link>
           </div>
         </div>

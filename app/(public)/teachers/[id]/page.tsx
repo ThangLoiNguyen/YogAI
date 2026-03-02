@@ -4,6 +4,12 @@ type TeacherProfilePageProps = {
   params: { id: string };
 };
 
+export function generateStaticParams() {
+  return Array.from({ length: 6 }, (_, index) => ({
+    id: String(index + 1),
+  }));
+}
+
 export default function TeacherProfilePage({ params }: TeacherProfilePageProps) {
   const { id } = params;
 
@@ -20,21 +26,21 @@ export default function TeacherProfilePage({ params }: TeacherProfilePageProps) 
         <header className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
           <div className="space-y-2">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-sky-700">
-              Teacher profile
+              Hồ sơ giáo viên
             </p>
             <h1 className="text-2xl font-semibold sm:text-3xl">
-              Teacher {id} · Vinyasa & Yin
+              Giáo viên {id} · Vinyasa & Yin
             </h1>
             <p className="max-w-xl text-sm text-slate-600">
-              Chuyên về mobility, stress recovery và nervous system regulation
-              cho người làm việc văn phòng.
+              Chuyên về tăng độ linh hoạt, phục hồi sau stress và điều hoà hệ
+              thần kinh cho người làm việc văn phòng.
             </p>
             <div className="flex flex-wrap gap-2 text-[11px] text-slate-700">
               <span className="rounded-full bg-sky-50 px-3 py-1 ring-1 ring-sky-100">
-                500h RYT Certified
+                500h RYT chứng nhận
               </span>
               <span className="rounded-full bg-sky-50 px-3 py-1 ring-1 ring-sky-100">
-                Trauma-informed
+                Hiểu biết về sang chấn
               </span>
               <span className="rounded-full bg-sky-50 px-3 py-1 ring-1 ring-sky-100">
                 Breathwork
@@ -43,14 +49,14 @@ export default function TeacherProfilePage({ params }: TeacherProfilePageProps) 
           </div>
           <div className="space-y-2 rounded-2xl border border-sky-100 bg-white p-4 text-xs text-slate-700 shadow-sm shadow-sky-50">
             <p>
-              Matching score cho bạn:{" "}
+              Mức độ phù hợp với bạn:{" "}
               <span className="font-semibold text-sky-700">92%</span>
             </p>
             <p>
               Lịch lớp: Tối thứ 2,4,6 ·{" "}
               <span className="text-sky-700">19:00–20:15</span>
             </p>
-            <p>Khu vực: Quận 1, TP. HCM · Online via Zoom</p>
+            <p>Khu vực: Quận 1, TP. HCM · Trực tuyến qua Zoom</p>
             <button className="mt-2 w-full rounded-full bg-sky-500 px-4 py-2 text-xs font-semibold text-white hover:bg-sky-400">
               Đặt lớp thử (trial)
             </button>
@@ -63,17 +69,18 @@ export default function TeacherProfilePage({ params }: TeacherProfilePageProps) 
               Về phong cách dạy
             </h2>
             <p className="text-sm text-slate-700">
-              Tập trung vào việc build awareness về cơ thể, kết hợp giữa
-              breath-led Vinyasa và Yin giữ lâu để giải phóng fascia. Mỗi buổi
-              đều có 5–10 phút closing cho nervous system regulation.
+              Tập trung vào việc nuôi dưỡng nhận biết cơ thể, kết hợp giữa
+              Vinyasa dẫn bằng hơi thở và các tư thế Yin giữ lâu để làm mềm mô
+              cân cơ. Mỗi buổi đều có 5–10 phút kết thúc dành riêng cho việc
+              điều hoà hệ thần kinh.
             </p>
             <h3 className="mt-4 text-xs font-semibold uppercase tracking-[0.2em] text-sky-700">
               Chuyên môn chính
             </h3>
             <ul className="mt-2 list-disc space-y-1 pl-4 text-sm text-slate-700">
               <li>Giảm đau lưng, vai gáy cho dân văn phòng.</li>
-              <li>Quản lý stress & anxiety qua breathwork nhẹ nhàng.</li>
-              <li>Tăng mobility và range of motion an toàn.</li>
+              <li>Quản lý căng thẳng và lo âu qua các bài thở nhẹ nhàng.</li>
+              <li>Tăng độ linh hoạt và biên độ vận động một cách an toàn.</li>
             </ul>
           </section>
 

@@ -7,7 +7,7 @@ export default function ClassesPage() {
       <div className="mx-auto flex max-w-5xl flex-col gap-8 px-4 py-10">
         <header className="space-y-2">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-sky-700">
-            Classes
+            Lớp học
           </p>
           <h1 className="text-2xl font-semibold sm:text-3xl">
             Tìm lớp yoga theo lịch và mục tiêu
@@ -28,7 +28,7 @@ export default function ClassesPage() {
               <div className="flex items-center justify-between gap-3">
                 <div>
                   <p className="text-sm font-semibold">
-                    Yin for Desk Workers · Level 1
+                    Yin cho người ngồi bàn giấy · Cấp 1
                   </p>
                   <p className="text-xs text-slate-600">
                     Thứ 2 & 4 · 19:00–20:15 · Quận 1
@@ -43,7 +43,7 @@ export default function ClassesPage() {
                 phù hợp cho người mới bắt đầu.
               </p>
               <div className="mt-3 flex items-center justify-between text-[11px] text-slate-700">
-                <span>Teacher A · 500h RYT</span>
+                <span>Giáo viên A · 500h RYT</span>
                 <span className="text-sky-700">Còn 3 chỗ</span>
               </div>
             </Link>

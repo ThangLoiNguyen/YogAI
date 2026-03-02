@@ -21,9 +21,9 @@ export default function SessionLogPage({ params }: SessionLogPageProps) {
             Poses & cấu trúc buổi tập
           </h2>
           <ul className="list-disc space-y-1.5 pl-4">
-            <li>Cat-cow · mobilize cột sống · 2 phút.</li>
-            <li>Sphinx pose · mild backbend · 3–5 phút.</li>
-            <li>Supported child&apos;s pose · restorative · 5–7 phút.</li>
+            <li>Cat-cow · làm mềm, vận động cột sống · 2 phút.</li>
+            <li>Tư thế Sphinx · backbend nhẹ · 3–5 phút.</li>
+            <li>Tư thế em bé được hỗ trợ · phục hồi · 5–7 phút.</li>
           </ul>
         </section>
 

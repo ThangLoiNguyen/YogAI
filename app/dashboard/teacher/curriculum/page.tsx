@@ -1,7 +1,22 @@
 const CURRICULA = [
-  { id: "C001", title: "Yin for Desk Workers · Level 1", duration: 60, type: "Template" },
-  { id: "C002", title: "Gentle Flow for Back Care", duration: 45, type: "Custom" },
-  { id: "C003", title: "Restorative for Burnout", duration: 75, type: "AI draft" },
+  {
+    id: "C001",
+    title: "Yin cho người ngồi bàn giấy · Cấp 1",
+    duration: 60,
+    type: "Mẫu",
+  },
+  {
+    id: "C002",
+    title: "Dòng chảy nhẹ cho lưng",
+    duration: 45,
+    type: "Tự tạo",
+  },
+  {
+    id: "C003",
+    title: "Restorative cho kiệt sức",
+    duration: 75,
+    type: "Bản nháp AI",
+  },
 ];
 
 export default function TeacherCurriculumPage() {

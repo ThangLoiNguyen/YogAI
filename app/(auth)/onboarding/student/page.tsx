@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 
-const STEPS = ["Sức khoẻ", "Kinh nghiệm", "Mục tiêu", "Lịch rảnh", "Preference"];
+const STEPS = ["Sức khoẻ", "Kinh nghiệm", "Mục tiêu", "Lịch rảnh", "Sở thích"];
 
 export default function StudentOnboardingPage() {
   const [step, setStep] = useState(0);
@@ -22,22 +22,22 @@ export default function StudentOnboardingPage() {
             Trang chủ
           </Link>
           <p className="text-xs text-slate-500">
-            Bước {step + 1}/5 · Intake form học viên
+            Bước {step + 1}/5 · Phiếu thông tin học viên
           </p>
         </header>
 
         <div className="space-y-6 rounded-3xl border border-sky-100 bg-white p-6 shadow-xl shadow-sky-100 md:p-8">
           <div className="space-y-3">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-sky-700">
-              Onboarding học viên
+              Hướng dẫn ban đầu cho học viên
             </p>
             <h1 className="text-2xl font-semibold">
               Cho chúng tôi biết về cơ thể & nhịp sống của bạn
             </h1>
             <p className="text-sm text-slate-600">
-              Thông tin này giúp Matching Engine và Curriculum Builder tôn trọng
-              giới hạn cơ thể, tránh contraindication và thiết kế lộ trình an
-              toàn hơn.
+              Thông tin này giúp bộ máy ghép đôi AI và trình xây giáo án tôn
+              trọng giới hạn cơ thể, tránh chống chỉ định và thiết kế lộ trình
+              an toàn hơn.
             </p>
           </div>
 
@@ -225,7 +225,7 @@ export default function StudentOnboardingPage() {
                 href="/dashboard/student"
                 className="inline-flex items-center justify-center rounded-full bg-sky-500 px-5 py-2 text-sm font-semibold text-white shadow-md shadow-sky-200 hover:bg-sky-400"
               >
-                Lưu và vào dashboard →
+                Lưu và vào bảng điều khiển →
               </Link>
             )}
           </div>

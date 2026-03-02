@@ -16,9 +16,9 @@ export default function PublicLandingPage() {
               <span className="text-sky-600">học viên</span>.
             </h1>
             <p className="max-w-xl text-sm leading-relaxed text-slate-600 sm:text-base">
-              Nền tảng kết hợp portfolio công khai, dashboard SaaS, và AI engine
-              để gợi ý giáo viên, thiết kế giáo án, và phân tích lộ trình tập
-              luyện – tất cả trong một.
+              Nền tảng all-in-one kết hợp hồ sơ công khai, bảng điều khiển
+              quản lý và bộ máy AI, giúp gợi ý giáo viên phù hợp, thiết kế giáo
+              án cá nhân hóa và phân tích lộ trình tập luyện chi tiết.
             </p>
             <div className="flex flex-wrap gap-3">
               <Link
@@ -37,60 +37,60 @@ export default function PublicLandingPage() {
             <div className="grid gap-4 text-xs text-slate-600 sm:grid-cols-3 sm:text-sm">
               <div>
                 <p className="font-semibold text-sky-700">
-                  AI Matching Engine
+                  Bộ máy ghép đôi AI
                 </p>
                 <p>Tự động gợi ý giáo viên & lớp phù hợp từng học viên.</p>
               </div>
               <div>
                 <p className="font-semibold text-sky-700">
-                  Curriculum Builder
+                  Trình xây giáo án AI
                 </p>
-                <p>Thiết kế giáo án dựa trên mục tiêu & health profile.</p>
+                <p>Thiết kế giáo án dựa trên mục tiêu & hồ sơ sức khỏe.</p>
               </div>
               <div>
                 <p className="font-semibold text-sky-700">
-                  Student Journey
+                  Hành trình học viên
                 </p>
-                <p>Theo dõi tiến trình, health history và feedback.</p>
+                <p>Theo dõi tiến trình, lịch sử sức khỏe và phản hồi.</p>
               </div>
             </div>
           </div>
 
           <div className="space-y-4 rounded-3xl border border-sky-100 bg-white p-5 shadow-xl shadow-sky-100">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-sky-700">
-              Live preview dashboard
+              Xem thử bảng điều khiển trực tiếp
             </p>
             <div className="space-y-4 rounded-2xl bg-sky-50 p-4">
               <div className="flex justify-between text-xs text-slate-600">
-                <span>Student Journey</span>
+                <span>Hành trình học viên</span>
                 <span className="text-sky-600">+18% tuần này</span>
               </div>
               <div className="grid grid-cols-3 gap-3 text-xs">
                 <div className="rounded-xl bg-white p-3 ring-1 ring-sky-100">
-                  <p className="text-slate-500">Sessions</p>
+                  <p className="text-slate-500">Số buổi</p>
                   <p className="mt-1 text-2xl font-semibold text-sky-600">
                     32
                   </p>
                   <p className="mt-1 text-sky-600">+8 tuần trước</p>
                 </div>
                 <div className="rounded-xl bg-white p-3 ring-1 ring-sky-100">
-                  <p className="text-slate-500">Avg. energy</p>
+                  <p className="text-slate-500">Mức năng lượng trung bình</p>
                   <p className="mt-1 text-2xl font-semibold text-sky-600">
                     7.9
                   </p>
-                  <p className="mt-1 text-sky-600">on 10</p>
+                  <p className="mt-1 text-sky-600">trên 10</p>
                 </div>
                 <div className="rounded-xl bg-white p-3 ring-1 ring-sky-100">
-                  <p className="text-slate-500">Retention</p>
+                  <p className="text-slate-500">Giữ chân học viên</p>
                   <p className="mt-1 text-2xl font-semibold text-sky-600">
                     92%
                   </p>
-                  <p className="mt-1 text-sky-600">AI-assisted</p>
+                  <p className="mt-1 text-sky-600">Có AI hỗ trợ</p>
                 </div>
               </div>
               <div className="rounded-xl border border-dashed border-sky-300 bg-sky-50 p-3 text-xs text-slate-700">
-                AIAssistant: “Dựa trên 6 buổi gần nhất, nên thêm block restorative
-                10 phút cuối buổi cho nhóm năng lượng thấp & stress cao.”
+                Trợ lý AI: “Dựa trên 6 buổi gần nhất, nên thêm block phục hồi 10
+                phút cuối buổi cho nhóm năng lượng thấp & stress cao.”
               </div>
             </div>
           </div>
@@ -99,40 +99,40 @@ export default function PublicLandingPage() {
         <section className="space-y-6">
           <div className="flex flex-wrap items-center justify-between gap-4">
             <h2 className="text-lg font-semibold text-slate-900 sm:text-2xl">
-              Một nền tảng, hai dashboard chuyên sâu
+              Một nền tảng, hai bảng điều khiển chuyên sâu
             </h2>
             <p className="max-w-xl text-xs text-slate-600 sm:text-sm">
-              Tách biệt rõ experience của học viên và giáo viên, nhưng cùng
-              chia sẻ chung một AI engine và data platform.
+              Tách biệt rõ trải nghiệm của học viên và giáo viên, nhưng cùng
+              chia sẻ chung một bộ máy AI và nền tảng dữ liệu.
             </p>
           </div>
           <div className="grid gap-6 md:grid-cols-2">
             <div className="rounded-2xl border border-sky-100 bg-white p-5 shadow-sm shadow-sky-50">
               <p className="mb-2 text-xs font-semibold text-sky-700">
-                Student Dashboard
+                Bảng điều khiển học viên
               </p>
               <p className="mb-4 text-sm text-slate-700">
-                Lộ trình cá nhân hoá, health history, recommendation class & GV
+                Lộ trình cá nhân hoá, lịch sử sức khoẻ, gợi ý lớp & giáo viên
                 theo thời gian thực.
               </p>
               <ul className="space-y-2 text-sm text-slate-600">
-                <li>• JourneyTimeline & ProgressDashboard</li>
-                <li>• HealthHistory & session feedback</li>
-                <li>• AI RecommendationEngine cho GV & lớp</li>
+                <li>• Dòng thời gian hành trình & bảng tiến trình</li>
+                <li>• Lịch sử sức khoẻ & phản hồi sau buổi học</li>
+                <li>• Bộ gợi ý AI cho giáo viên & lớp</li>
               </ul>
             </div>
             <div className="rounded-2xl border border-sky-100 bg-white p-5 shadow-sm shadow-sky-50">
               <p className="mb-2 text-xs font-semibold text-sky-700">
-                Teacher Dashboard
+                Bảng điều khiển giáo viên
               </p>
               <p className="mb-4 text-sm text-slate-700">
-                CRM học viên, SessionLogger, CurriculumBuilder và Marketing
-                Assistant cho GV mới.
+                CRM học viên, nhật ký buổi học, trình xây giáo án và Trợ lý
+                Marketing cho giáo viên mới.
               </p>
               <ul className="space-y-2 text-sm text-slate-600">
-                <li>• StudentCRM với filter và ghi chú</li>
-                <li>• AI CurriculumBuilder kéo thả block giáo án</li>
-                <li>• MarketingHub & AIAssistant tối ưu profile</li>
+                <li>• CRM học viên với bộ lọc và ghi chú</li>
+                <li>• Trình xây giáo án AI kéo thả theo block</li>
+                <li>• Trung tâm marketing & Trợ lý AI tối ưu hồ sơ</li>
               </ul>
             </div>
           </div>

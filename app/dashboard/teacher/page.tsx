@@ -6,7 +6,7 @@ export default function TeacherDashboardOverview() {
           Tổng quan studio của bạn
         </h1>
         <p className="text-sm text-slate-600">
-          Snapshot nhanh về học viên đang active, doanh thu gần đây và gợi ý từ
+          Snapshot nhanh về học viên đang hoạt động, doanh thu gần đây và gợi ý từ
           AI về giáo án / marketing.
         </p>
       </div>

@@ -8,7 +8,7 @@ export default function StudentProfilePage() {
       <div>
         <h1 className="text-lg font-semibold text-slate-900">Hồ sơ học viên</h1>
         <p className="text-sm text-slate-600">
-          Thông tin cơ bản, thành phố và vài preference giúp hệ thống đề xuất
+          Thông tin cơ bản, thành phố và vài sở thích giúp hệ thống đề xuất
           giáo viên/phong cách phù hợp.
         </p>
       </div>

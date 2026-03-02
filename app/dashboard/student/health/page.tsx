@@ -40,7 +40,10 @@ export default function StudentHealthPage() {
           <li>
             Hạn chế đứng quá lâu ở các tư thế chịu lực mạnh lên khớp gối bên trái.
           </li>
-          <li>Tập trung vào breathing nhẹ và restorative vào cuối ngày nhiều stress.</li>
+          <li>
+            Tập trung vào hơi thở nhẹ nhàng và các tư thế phục hồi vào cuối ngày
+            nhiều stress.
+          </li>
         </ul>
       </section>
     </div>

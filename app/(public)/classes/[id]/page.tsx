@@ -19,10 +19,10 @@ export default function ClassDetailPage({ params }: ClassDetailPageProps) {
 
         <header className="space-y-3">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-sky-700">
-            Class detail
+            Thông tin lớp học
           </p>
           <h1 className="text-2xl font-semibold sm:text-3xl">
-            Yin for Desk Workers · Level 1 (#{id})
+            Yin cho người ngồi bàn giấy · Cấp 1 (#{id})
           </h1>
           <p className="max-w-2xl text-sm text-slate-600">
             Lớp yin nhẹ nhàng tập trung vào lưng, vai và hông – lý tưởng cho
@@ -36,9 +36,9 @@ export default function ClassDetailPage({ params }: ClassDetailPageProps) {
               Nội dung buổi học
             </h2>
             <ul className="mt-3 space-y-2 text-sm text-slate-700">
-              <li>• 10 phút breathing & grounding.</li>
-              <li>• 35 phút yin focusing on hips & lower back.</li>
-              <li>• 15 phút restorative & closing integration.</li>
+              <li>• 10 phút thở & grounding.</li>
+              <li>• 35 phút yin tập trung vào hông & lưng dưới.</li>
+              <li>• 15 phút restorative & kết nối, tích hợp cuối buổi.</li>
             </ul>
             <h3 className="mt-4 text-xs font-semibold uppercase tracking-[0.2em] text-sky-700">
               Ai nên tham gia
@@ -55,7 +55,7 @@ export default function ClassDetailPage({ params }: ClassDetailPageProps) {
                 Thông tin đặt chỗ
               </h2>
               <p className="mt-3">
-                Thứ 2 & 4 · 19:00–20:15 · Quận 1 · Studio nhỏ ấm cúng · Max 10
+                Thứ 2 & 4 · 19:00–20:15 · Quận 1 · studio nhỏ ấm cúng · tối đa 10
                 người.
               </p>
               <p className="mt-2 text-slate-700">
@@ -79,8 +79,8 @@ export default function ClassDetailPage({ params }: ClassDetailPageProps) {
                 Giáo viên phụ trách
               </h2>
               <p className="mt-2 text-slate-700">
-                Teacher A · 500h RYT · Chuyên về mobility và nervous system
-                regulation.
+                Giáo viên A · 500h RYT · Chuyên về mobility và điều hoà hệ thần
+                kinh.
               </p>
               <Link
                 href="/teachers/1"

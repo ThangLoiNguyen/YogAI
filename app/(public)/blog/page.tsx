@@ -10,7 +10,7 @@ export default function BlogPage() {
             Blog
           </p>
           <h1 className="text-2xl font-semibold sm:text-3xl">
-            Kiến thức về yoga, wellbeing & nervous system
+            Kiến thức về yoga, sức khỏe tinh thần & hệ thần kinh
           </h1>
           <p className="max-w-2xl text-sm text-slate-600">
             Nội dung viết cho người bận rộn: ngắn gọn, thực tế, dễ áp dụng vào
@@ -26,7 +26,7 @@ export default function BlogPage() {
               className="group rounded-2xl border border-sky-100 bg-white p-4 transition hover:border-sky-300 hover:bg-sky-50"
             >
               <p className="text-xs text-sky-700">
-                Nervous system · 8 phút đọc
+                Hệ thần kinh · 8 phút đọc
               </p>
               <h2 className="mt-2 text-sm font-semibold">
                 3 dấu hiệu cơ thể đang quá tải mà dân văn phòng hay bỏ qua

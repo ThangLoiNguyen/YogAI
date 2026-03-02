@@ -6,8 +6,8 @@ export default function StudentDashboardOverview() {
           Chào mừng bạn quay lại
         </h1>
         <p className="text-sm text-slate-600">
-          Đây là overview nơi bạn thấy lộ trình, buổi tập gần đây và đề xuất từ
-          Matching Engine.
+          Đây là tổng quan nơi bạn thấy lộ trình, buổi tập gần đây và đề xuất từ
+          bộ máy ghép đôi AI.
         </p>
       </div>
 
@@ -15,7 +15,7 @@ export default function StudentDashboardOverview() {
         <div className="rounded-2xl border border-sky-100 bg-white p-4 shadow-sm shadow-sky-50">
           <p className="text-xs text-slate-500">Buổi tập gần nhất</p>
           <p className="mt-1 text-sm font-semibold text-slate-900">
-            Yin for Desk Workers
+            Yin cho người ngồi bàn giấy
           </p>
           <p className="mt-1 text-xs text-slate-600">2 ngày trước · 60 phút</p>
         </div>

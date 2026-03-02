@@ -12,37 +12,37 @@ export default function CurriculumDetailPage({
           Giáo án #{params.id}
         </h1>
         <p className="text-sm text-slate-600">
-          Bản demo cho Curriculum Builder: chia rõ block warm-up, main và
-          cool-down.
+          Bản demo cho trình xây giáo án: chia rõ block khởi động, phần chính và
+          thả lỏng cuối buổi.
         </p>
       </div>
 
       <div className="grid gap-4 md:grid-cols-3">
         <div className="rounded-2xl border border-sky-100 bg-white p-4 text-xs text-slate-700 shadow-sm shadow-sky-50">
           <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-sky-700">
-            Warm-up
+            Khởi động
           </p>
           <ul className="mt-2 space-y-1.5">
-            <li>• 5 phút breathing & grounding.</li>
-            <li>• 5 phút mobilize cổ, vai, cột sống.</li>
+            <li>• 5 phút hít thở sâu và cảm nhận cơ thể.</li>
+            <li>• 5 phút làm mềm, xoay chuyển cổ, vai, cột sống.</li>
           </ul>
         </div>
         <div className="rounded-2xl border border-sky-100 bg-white p-4 text-xs text-slate-700 shadow-sm shadow-sky-50">
           <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-sky-700">
-            Main
+            Phần chính
           </p>
           <ul className="mt-2 space-y-1.5">
             <li>• 25–30 phút yin tập trung vào hông & lưng dưới.</li>
-            <li>• Thời lượng giữ đủ lâu để fascia kịp “thả lỏng”.</li>
+            <li>• Thời lượng giữ đủ lâu để các mô cân cơ kịp “thả lỏng”.</li>
           </ul>
         </div>
         <div className="rounded-2xl border border-sky-100 bg-white p-4 text-xs text-slate-700 shadow-sm shadow-sky-50">
           <p className="text-[11px] font-semibold uppercase tracking-[0.16em] text-sky-700">
-            Cool-down
+            Thả lỏng cuối
           </p>
           <ul className="mt-2 space-y-1.5">
-            <li>• 10–15 phút restorative & closing integration.</li>
-            <li>• Kết hợp body scan & breath để reset nervous system.</li>
+            <li>• 10–15 phút phục hồi và kết nối lại toàn bộ cơ thể.</li>
+            <li>• Kết hợp quét cơ thể và hít thở để làm dịu hệ thần kinh.</li>
           </ul>
         </div>
       </div>

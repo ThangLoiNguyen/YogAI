@@ -1,7 +1,22 @@
 const UPCOMING = [
-  { day: "Thứ 2", date: "06/04", title: "Yin for Desk Workers", time: "19:00–20:15" },
-  { day: "Thứ 4", date: "08/04", title: "Gentle Vinyasa", time: "06:30–07:15" },
-  { day: "Thứ 6", date: "10/04", title: "Restorative for Sleep", time: "21:00–21:45" },
+  {
+    day: "Thứ 2",
+    date: "06/04",
+    title: "Yin cho người ngồi bàn giấy",
+    time: "19:00–20:15",
+  },
+  {
+    day: "Thứ 4",
+    date: "08/04",
+    title: "Vinyasa nhẹ buổi sáng",
+    time: "06:30–07:15",
+  },
+  {
+    day: "Thứ 6",
+    date: "10/04",
+    title: "Restorative hỗ trợ giấc ngủ",
+    time: "21:00–21:45",
+  },
 ];
 
 export default function StudentSchedulePage() {

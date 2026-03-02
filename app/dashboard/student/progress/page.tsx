@@ -1,7 +1,7 @@
 const STATS = [
   { label: "Buổi tập 30 ngày qua", value: "14", hint: "+4 so với trước" },
-  { label: "Năng lượng trung bình sau buổi tập", value: "7.8/10", hint: "ổn định" },
-  { label: "Cảm nhận về giấc ngủ", value: "tốt hơn", hint: "theo self-report" },
+  { label: "Năng lượng trung bình sau buổi tập", value: "7,8/10", hint: "ổn định" },
+  { label: "Cảm nhận về giấc ngủ", value: "tốt hơn", hint: "theo tự đánh giá" },
 ];
 
 export default function StudentProgressPage() {
@@ -31,7 +31,7 @@ export default function StudentProgressPage() {
         <h2 className="text-sm font-semibold text-slate-900">Xu hướng gần đây</h2>
         <p className="text-xs">
           Tần suất tập luyện đang tăng dần nhưng vẫn nằm trong vùng an toàn. Nên
-          giữ ít nhất 1 buổi restorative/tuần để cơ thể có thời gian hồi phục.
+          giữ ít nhất 1 buổi phục hồi/tuần để cơ thể có thời gian hồi phục.
         </p>
       </section>
     </div>

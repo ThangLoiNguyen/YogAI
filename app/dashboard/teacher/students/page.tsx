@@ -1,6 +1,6 @@
 const STUDENTS = [
-  { id: "S001", name: "Hà", status: "Active", focus: "Đau lưng dưới" },
-  { id: "S002", name: "Minh", status: "Active", focus: "Stress & mất ngủ" },
+  { id: "S001", name: "Hà", status: "Hoạt động", focus: "Đau lưng dưới" },
+  { id: "S002", name: "Minh", status: "Hoạt động", focus: "Stress & mất ngủ" },
   { id: "S003", name: "Trang", status: "Tạm nghỉ", focus: "Hồi phục chấn thương gối" },
 ];
 
@@ -10,8 +10,8 @@ export default function TeacherStudentsPage() {
       <div>
         <h1 className="text-lg font-semibold text-slate-900">Danh sách học viên</h1>
         <p className="text-sm text-slate-600">
-          StudentCRM đơn giản: xem nhanh trạng thái, focus chính của từng học viên
-          để chuẩn bị giáo án phù hợp.
+          CRM học viên đơn giản: xem nhanh trạng thái, trọng tâm hiện tại của
+          từng học viên để chuẩn bị giáo án phù hợp.
         </p>
       </div>
 

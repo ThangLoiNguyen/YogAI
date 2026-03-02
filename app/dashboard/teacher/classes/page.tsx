@@ -1,7 +1,19 @@
 const CLASSES = [
-  { title: "Yin for Desk Workers", schedule: "T2 & T4 · 19:00–20:15", enrolled: 8 },
-  { title: "Gentle Morning Flow", schedule: "T3 & T5 · 06:30–07:15", enrolled: 6 },
-  { title: "Restorative for Sleep", schedule: "T7 · 21:00–22:00", enrolled: 10 },
+  {
+    title: "Yin cho người ngồi bàn giấy",
+    schedule: "T2 & T4 · 19:00–20:15",
+    enrolled: 8,
+  },
+  {
+    title: "Dòng chảy buổi sáng nhẹ nhàng",
+    schedule: "T3 & T5 · 06:30–07:15",
+    enrolled: 6,
+  },
+  {
+    title: "Restorative hỗ trợ giấc ngủ",
+    schedule: "T7 · 21:00–22:00",
+    enrolled: 10,
+  },
 ];
 
 export default function TeacherClassesPage() {

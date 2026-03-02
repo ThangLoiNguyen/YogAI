@@ -24,8 +24,8 @@ export default function StudentRegisterPage() {
               Bắt đầu hành trình yoga cá nhân hoá
             </h1>
             <p className="text-sm text-slate-600">
-              Sau bước đăng ký, bạn sẽ đi qua intake form chi tiết về sức khoẻ,
-              thói quen và mục tiêu để AI có thể đề xuất lộ trình phù hợp.
+              Sau bước đăng ký, bạn sẽ đi qua phiếu thông tin chi tiết về sức
+              khoẻ, thói quen và mục tiêu để AI có thể đề xuất lộ trình phù hợp.
             </p>
           </div>
 
@@ -48,7 +48,7 @@ export default function StudentRegisterPage() {
                 id="email"
                 type="email"
                 className="w-full rounded-xl border border-sky-100 bg-sky-50 px-3 py-2 text-sm text-slate-900 outline-none ring-sky-200 placeholder:text-slate-400 focus:bg-white focus:ring"
-                placeholder="you@example.com"
+                placeholder="ban@vidu.com"
               />
             </div>
             <div className="space-y-1.5 text-sm">
@@ -83,7 +83,7 @@ export default function StudentRegisterPage() {
               href="/onboarding/student"
               className="inline-flex items-center justify-center rounded-full bg-sky-500 px-5 py-2 text-sm font-semibold text-white shadow-md shadow-sky-200 hover:bg-sky-400"
             >
-              Tiếp tục intake form →
+              Tiếp tục phiếu thông tin →
             </Link>
           </div>
         </div>

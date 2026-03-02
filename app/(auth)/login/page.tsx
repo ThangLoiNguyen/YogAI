@@ -15,7 +15,7 @@ export default function LoginPage() {
               YOGAI
             </span>
             <span className="text-sm text-slate-600">
-              Yoga platform for teachers & students
+              Nền tảng yoga cho giáo viên & học viên
             </span>
           </Link>
         </div>
@@ -29,10 +29,10 @@ export default function LoginPage() {
               <h1 className="mt-2 text-2xl font-semibold">
                 Quản lý hành trình yoga của bạn
               </h1>
-              <p className="mt-2 text-sm text-slate-600">
-                Một tài khoản cho cả học viên và giáo viên. Chọn vai trò chính
-                để tối ưu trải nghiệm dashboard.
-              </p>
+                <p className="mt-2 text-sm text-slate-600">
+                  Một tài khoản cho cả học viên và giáo viên. Chọn vai trò chính
+                  để tối ưu trải nghiệm bảng điều khiển.
+                </p>
             </div>
 
             <div className="inline-flex gap-2 rounded-full bg-sky-50 p-1 text-xs">
@@ -69,7 +69,7 @@ export default function LoginPage() {
                   id="email"
                   type="email"
                   className="w-full rounded-xl border border-sky-100 bg-sky-50 px-3 py-2 text-sm text-slate-900 outline-none ring-sky-200 placeholder:text-slate-400 focus:bg-white focus:ring"
-                  placeholder="you@example.com"
+                  placeholder="ban@vidu.com"
                 />
               </div>
               <div className="space-y-1.5 text-sm">
@@ -112,16 +112,16 @@ export default function LoginPage() {
 
           <aside className="space-y-4 rounded-2xl bg-sky-50 p-4 text-xs text-slate-700 ring-1 ring-sky-100">
             <p className="font-semibold text-sky-800">
-              Bạn sẽ thấy gì trong dashboard?
+              Bạn sẽ thấy gì trong bảng điều khiển?
             </p>
             <ul className="space-y-1.5">
               <li>
-                • Học viên: lộ trình cá nhân hoá, health history, gợi ý giáo
+                • Học viên: lộ trình cá nhân hoá, lịch sử sức khoẻ, gợi ý giáo
                 viên & lớp học.
               </li>
               <li>
-                • Giáo viên: CRM học viên, SessionLogger, CurriculumBuilder và
-                thống kê thu nhập.
+                • Giáo viên: CRM học viên, nhật ký buổi học, trình xây giáo án
+                và thống kê thu nhập.
               </li>
             </ul>
           </aside>

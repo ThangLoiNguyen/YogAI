@@ -12,7 +12,7 @@ export default function TeacherStudentDetailPage({
           Hồ sơ học viên #{params.id}
         </h1>
         <p className="text-sm text-slate-600">
-          Tổng quan health history, thói quen tập và ghi chú riêng để bạn theo
+          Tổng quan lịch sử sức khỏe, thói quen tập và ghi chú riêng để bạn theo
           dõi tiến trình của học viên.
         </p>
       </div>
@@ -30,8 +30,8 @@ export default function TeacherStudentDetailPage({
         <aside className="space-y-3 rounded-2xl border border-sky-100 bg-sky-50 p-4 text-xs text-slate-700 shadow-sm shadow-sky-50">
           <h3 className="font-semibold text-sky-800">Gợi ý từ góc nhìn AI</h3>
           <p>
-            Nên ưu tiên các buổi yin/restorative xen kẽ với vinyasa nhẹ,
-            tránh xếp 2 buổi nặng liên tiếp.
+            Nên ưu tiên các buổi yin/phục hồi xen kẽ với vinyasa nhẹ, tránh
+            xếp 2 buổi nặng liên tiếp.
           </p>
         </aside>
       </div>

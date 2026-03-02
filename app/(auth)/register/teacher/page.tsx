@@ -21,11 +21,11 @@ export default function TeacherRegisterPage() {
               Đăng ký giáo viên
             </p>
             <h1 className="text-2xl font-semibold">
-              Xây dựng portfolio & studio online của bạn
+              Xây dựng hồ sơ & studio trực tuyến của bạn
             </h1>
             <p className="text-sm text-slate-600">
               Sau bước đăng ký, bạn sẽ thiết lập hồ sơ, chuyên môn và chứng chỉ.
-              Marketing Assistant sẽ gợi ý cách tối ưu profile và nội dung.
+              Trợ lý Marketing sẽ gợi ý cách tối ưu hồ sơ và nội dung.
             </p>
           </div>
 
@@ -48,7 +48,7 @@ export default function TeacherRegisterPage() {
                 id="email"
                 type="email"
                 className="w-full rounded-xl border border-sky-100 bg-sky-50 px-3 py-2 text-sm text-slate-900 outline-none ring-sky-200 placeholder:text-slate-400 focus:bg-white focus:ring"
-                placeholder="you@example.com"
+                placeholder="ban@vidu.com"
               />
             </div>
             <div className="space-y-1.5 text-sm">

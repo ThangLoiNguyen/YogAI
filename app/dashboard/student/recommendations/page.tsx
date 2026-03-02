@@ -16,11 +16,17 @@ type MatchItem = {
 export default function StudentRecommendationsPage() {
   const [data, setData] = useState<MatchItem[]>([]);
   const [loading, setLoading] = useState(true);
+  const backend = process.env.NEXT_PUBLIC_FIREBASE_BACKEND_URL;
 
   useEffect(() => {
     async function load() {
       try {
-        const res = await fetch("/api/ai/recommend", {
+        if (!backend) {
+          setData([]);
+          return;
+        }
+
+        const res = await fetch(`${backend}/ai/recommend`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({}),
@@ -44,7 +50,7 @@ export default function StudentRecommendationsPage() {
           Đề xuất giáo viên & lớp học
         </h1>
         <p className="text-sm text-slate-600">
-          Matching Engine phân tích health profile, mục tiêu và lịch rảnh để
+          Bộ máy ghép đôi AI phân tích hồ sơ sức khoẻ, mục tiêu và lịch rảnh để
           gợi ý giáo viên/lớp phù hợp nhất cho bạn.
         </p>
       </div>
@@ -53,7 +59,7 @@ export default function StudentRecommendationsPage() {
         <p className="text-sm text-slate-500">Đang tính toán đề xuất...</p>
       ) : data.length === 0 ? (
         <p className="text-sm text-slate-500">
-          Chưa có dữ liệu đề xuất. Bạn có thể hoàn thành intake form trước.
+          Chưa có dữ liệu đề xuất. Bạn có thể hoàn thành phiếu thông tin trước.
         </p>
       ) : (
         <div className="grid gap-4 md:grid-cols-2">
@@ -73,7 +79,7 @@ export default function StudentRecommendationsPage() {
                 </div>
                 <div className="text-right text-xs">
                   <p className="font-semibold text-sky-700">
-                    {(item.score * 100).toFixed(0)}% match
+                    {(item.score * 100).toFixed(0)}% phù hợp
                   </p>
                   <p className="text-[11px] text-slate-500">ước tính</p>
                 </div>
