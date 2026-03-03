@@ -62,14 +62,28 @@ export default function TeacherAiAssistantPage() {
           </div>
           <div className="border-t border-sky-100 bg-sky-50/60 p-3">
             <div className="flex gap-2">
-              <Input
-                value={input}
-                onChange={(e) => setInput(e.target.value)}
-                placeholder="Hỏi AI: ví dụ 'gợi ý giáo án cho nhóm văn phòng stress cao...'"
-              />
-              <Button type="button" onClick={handleSend}>
-                Gửi
-              </Button>
+              <div className="relative flex-1">
+                <Input
+                  value={input}
+                  onChange={(e) => setInput(e.target.value)}
+                  placeholder="Hỏi bất kỳ điều gì"
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter" && !e.shiftKey) {
+                      e.preventDefault();
+                      handleSend();
+                    }
+                  }}
+                  className="h-10 !rounded-full pr-12"
+                />
+                <button
+                  type="button"
+                  onClick={handleSend}
+                  className="absolute inset-y-0 right-2 my-auto flex h-7 w-7 items-center justify-center rounded-full bg-sky-600 text-white text-lg font-semibold shadow-md hover:bg-sky-500"
+                  aria-label="Gửi tin nhắn"
+                >
+                  <span className="-mt-[1px]">↑</span>
+                </button>
+              </div>
             </div>
           </div>
         </div>
