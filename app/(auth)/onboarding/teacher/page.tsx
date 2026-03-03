@@ -67,11 +67,11 @@ export default function TeacherOnboardingPage() {
             </div>
           </form>
 
-          <div className="flex items-center justify-between border-t border-sky-100 pt-4 text-xs text-slate-600">
+          <div className="flex flex-col items-stretch gap-3 border-t border-sky-100 pt-4 text-xs text-slate-600 sm:flex-row sm:items-center sm:justify-between">
             <p>Hồ sơ có thể được chỉnh sửa lại trong bảng điều khiển giáo viên.</p>
             <Link
               href="/dashboard/teacher"
-              className="inline-flex items-center justify-center rounded-full bg-sky-500 px-5 py-2 text-sm font-semibold text-white shadow-md shadow-sky-200 hover:bg-sky-400"
+              className="inline-flex w-full items-center justify-center rounded-full bg-sky-500 px-5 py-2 text-sm font-semibold text-white shadow-md shadow-sky-200 hover:bg-sky-400 sm:w-auto"
             >
               Lưu và vào bảng điều khiển giáo viên →
             </Link>

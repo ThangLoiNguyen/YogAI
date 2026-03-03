@@ -35,14 +35,19 @@ export default function LoginPage() {
                 </p>
             </div>
 
-            <div className="inline-flex gap-2 rounded-full bg-sky-50 p-1 text-xs">
+            <div className="relative inline-flex gap-2 overflow-hidden rounded-full bg-sky-50 p-1 text-xs">
+              <div
+                className={`absolute inset-y-1 w-1/2 rounded-full bg-white shadow-sm shadow-sky-100 transition-transform duration-300 ${
+                  role === "student" ? "translate-x-0" : "translate-x-full"
+                }`}
+              />
               <button
                 type="button"
                 onClick={() => setRole("student")}
-                className={`flex-1 rounded-full px-3 py-1.5 font-medium ${
+                className={`relative z-10 flex-1 rounded-full px-3 py-1.5 font-medium transition-colors duration-200 ${
                   role === "student"
-                    ? "bg-white text-sky-700 shadow-sm"
-                    : "text-slate-500"
+                    ? "text-sky-700"
+                    : "text-slate-500 hover:text-sky-700"
                 }`}
               >
                 Tôi là học viên
@@ -50,10 +55,10 @@ export default function LoginPage() {
               <button
                 type="button"
                 onClick={() => setRole("teacher")}
-                className={`flex-1 rounded-full px-3 py-1.5 font-medium ${
+                className={`relative z-10 flex-1 rounded-full px-3 py-1.5 font-medium transition-colors duration-200 ${
                   role === "teacher"
-                    ? "bg-white text-sky-700 shadow-sm"
-                    : "text-slate-500"
+                    ? "text-sky-700"
+                    : "text-slate-500 hover:text-sky-700"
                 }`}
               >
                 Tôi là giáo viên
@@ -69,7 +74,7 @@ export default function LoginPage() {
                   id="email"
                   type="email"
                   className="w-full rounded-xl border border-sky-100 bg-sky-50 px-3 py-2 text-sm text-slate-900 outline-none ring-sky-200 placeholder:text-slate-400 focus:bg-white focus:ring"
-                  placeholder="ban@vidu.com"
+                  placeholder="example@gmail.com"
                 />
               </div>
               <div className="space-y-1.5 text-sm">

@@ -198,12 +198,12 @@ export default function StudentOnboardingPage() {
             </form>
           )}
 
-          <div className="flex items-center justify-between border-t border-sky-100 pt-4 text-xs text-slate-600">
+          <div className="flex flex-col items-stretch gap-3 border-t border-sky-100 pt-4 text-xs text-slate-600 sm:flex-row sm:items-center sm:justify-between">
             <button
               type="button"
               onClick={prev}
               disabled={step === 0}
-              className={`rounded-full px-3 py-1.5 text-xs ${
+              className={`w-full rounded-full px-3 py-1.5 text-xs sm:w-auto ${
                 step === 0
                   ? "cursor-not-allowed bg-sky-50 text-slate-400"
                   : "bg-sky-50 text-slate-600 ring-1 ring-sky-100 hover:bg-sky-100"
@@ -216,14 +216,14 @@ export default function StudentOnboardingPage() {
               <button
                 type="button"
                 onClick={next}
-                className="inline-flex items-center justify-center rounded-full bg-sky-500 px-5 py-2 text-sm font-semibold text-white shadow-md shadow-sky-200 hover:bg-sky-400"
+                className="inline-flex w-full items-center justify-center rounded-full bg-sky-500 px-5 py-2 text-sm font-semibold text-white shadow-md shadow-sky-200 hover:bg-sky-400 sm:w-auto"
               >
                 Tiếp tục →
               </button>
             ) : (
               <Link
                 href="/dashboard/student"
-                className="inline-flex items-center justify-center rounded-full bg-sky-500 px-5 py-2 text-sm font-semibold text-white shadow-md shadow-sky-200 hover:bg-sky-400"
+                className="inline-flex w-full items-center justify-center rounded-full bg-sky-500 px-5 py-2 text-sm font-semibold text-white shadow-md shadow-sky-200 hover:bg-sky-400 sm:w-auto"
               >
                 Lưu và vào bảng điều khiển →
               </Link>

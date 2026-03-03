@@ -1,3 +1,5 @@
+import { PublicShell } from "../../../../components/layout/PublicShell";
+
 type BlogPostPageProps = {
   params: { slug: string };
 };
@@ -12,7 +14,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
   const { slug } = params;
 
   return (
-    <div className="min-h-screen bg-sky-50 text-slate-900">
+    <PublicShell>
       <article className="mx-auto max-w-3xl px-4 py-10">
         <header className="space-y-3">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-sky-700">
@@ -39,7 +41,7 @@ export default function BlogPostPage({ params }: BlogPostPageProps) {
           </p>
         </div>
       </article>
-    </div>
+    </PublicShell>
   );
 }
 

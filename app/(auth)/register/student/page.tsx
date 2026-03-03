@@ -81,7 +81,7 @@ export default function StudentRegisterPage() {
             </p>
             <Link
               href="/onboarding/student"
-              className="inline-flex items-center justify-center rounded-full bg-sky-500 px-5 py-2 text-sm font-semibold text-white shadow-md shadow-sky-200 hover:bg-sky-400"
+              className="inline-flex w-full items-center justify-center rounded-full bg-sky-500 px-5 py-2 text-sm font-semibold text-white shadow-md shadow-sky-200 hover:bg-sky-400 sm:w-auto"
             >
               Tiếp tục phiếu thông tin →
             </Link>

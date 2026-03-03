@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { PublicShell } from "../../../../components/layout/PublicShell";
 
 type TeacherProfilePageProps = {
   params: { id: string };
@@ -14,8 +15,8 @@ export default function TeacherProfilePage({ params }: TeacherProfilePageProps) 
   const { id } = params;
 
   return (
-    <div className="min-h-screen bg-sky-50 text-slate-900">
-      <div className="mx-auto flex max-w-5xl flex-col gap-8 px-4 py-10">
+    <PublicShell>
+      <main className="mx-auto flex max-w-5xl flex-col gap-8 px-4 py-10">
         <Link
           href="/teachers"
           className="text-xs text-slate-600 underline-offset-4 hover:text-sky-700 hover:underline"
@@ -57,7 +58,7 @@ export default function TeacherProfilePage({ params }: TeacherProfilePageProps) 
               <span className="text-sky-700">19:00–20:15</span>
             </p>
             <p>Khu vực: Quận 1, TP. HCM · Trực tuyến qua Zoom</p>
-            <button className="mt-2 w-full rounded-full bg-sky-500 px-4 py-2 text-xs font-semibold text-white hover:bg-sky-400">
+            <button className="mt-2 w-full rounded-full bg-sky-500 px-4 py-2 text-sm font-semibold text-white hover:bg-sky-400 sm:w-auto">
               Đặt lớp thử (trial)
             </button>
           </div>
@@ -122,8 +123,8 @@ export default function TeacherProfilePage({ params }: TeacherProfilePageProps) 
             </div>
           </aside>
         </main>
-      </div>
-    </div>
+      </main>
+    </PublicShell>
   );
 }
 

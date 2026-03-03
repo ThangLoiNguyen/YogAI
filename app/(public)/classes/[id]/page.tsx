@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { PublicShell } from "../../../../components/layout/PublicShell";
 
 type ClassDetailPageProps = {
   params: { id: string };
@@ -8,8 +9,8 @@ export default function ClassDetailPage({ params }: ClassDetailPageProps) {
   const { id } = params;
 
   return (
-    <div className="min-h-screen bg-sky-50 text-slate-900">
-      <div className="mx-auto flex max-w-5xl flex-col gap-8 px-4 py-10">
+    <PublicShell>
+      <main className="mx-auto flex max-w-5xl flex-col gap-8 px-4 py-10">
         <Link
           href="/classes"
           className="text-xs text-slate-600 underline-offset-4 hover:text-sky-700 hover:underline"
@@ -69,7 +70,7 @@ export default function ClassDetailPage({ params }: ClassDetailPageProps) {
                 </span>
                 .
               </p>
-              <button className="mt-3 w-full rounded-full bg-sky-500 px-4 py-2 text-xs font-semibold text-white hover:bg-sky-400">
+              <button className="mt-3 w-full rounded-full bg-sky-500 px-4 py-2 text-sm font-semibold text-white hover:bg-sky-400 sm:w-auto">
                 Đặt chỗ ngay
               </button>
             </div>
@@ -91,8 +92,8 @@ export default function ClassDetailPage({ params }: ClassDetailPageProps) {
             </div>
           </aside>
         </main>
-      </div>
-    </div>
+      </main>
+    </PublicShell>
   );
 }
 

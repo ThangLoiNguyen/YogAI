@@ -22,14 +22,14 @@ const CURRICULA = [
 export default function TeacherCurriculumPage() {
   return (
     <div className="space-y-6">
-      <div className="flex items-center justify-between gap-3">
+      <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
         <div>
           <h1 className="text-lg font-semibold text-slate-900">Thư viện giáo án</h1>
           <p className="text-sm text-slate-600">
             Quản lý giáo án cá nhân, template và các bản draft sinh bởi AI.
           </p>
         </div>
-        <button className="rounded-full bg-sky-500 px-4 py-2 text-xs font-semibold text-white shadow-md shadow-sky-200 hover:bg-sky-400">
+        <button className="w-full rounded-full bg-sky-500 px-4 py-2 text-sm font-semibold text-white shadow-md shadow-sky-200 hover:bg-sky-400 sm:w-auto">
           Tạo giáo án mới
         </button>
       </div>

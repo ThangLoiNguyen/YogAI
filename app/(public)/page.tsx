@@ -23,13 +23,13 @@ export default function PublicLandingPage() {
             <div className="flex flex-wrap gap-3">
               <Link
                 href="/register/teacher"
-                className="rounded-full bg-sky-500 px-5 py-2 text-sm font-semibold text-white shadow-md shadow-sky-200 hover:bg-sky-400"
+                className="w-full rounded-full bg-sky-500 px-5 py-2 text-sm font-semibold text-white shadow-md shadow-sky-200 hover:bg-sky-400 sm:w-auto"
               >
                 Tôi là giáo viên
               </Link>
               <Link
                 href="/register/student"
-                className="rounded-full border border-sky-200 px-5 py-2 text-sm font-semibold text-sky-700 hover:bg-sky-50"
+                className="w-full rounded-full border border-sky-200 px-5 py-2 text-sm font-semibold text-sky-700 hover:bg-sky-50 sm:w-auto"
               >
                 Tôi là học viên
               </Link>

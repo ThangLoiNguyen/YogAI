@@ -81,7 +81,7 @@ export default function TeacherRegisterPage() {
             </p>
             <Link
               href="/onboarding/teacher"
-              className="inline-flex items-center justify-center rounded-full bg-sky-500 px-5 py-2 text-sm font-semibold text-white shadow-md shadow-sky-200 hover:bg-sky-400"
+              className="inline-flex w-full items-center justify-center rounded-full bg-sky-500 px-5 py-2 text-sm font-semibold text-white shadow-md shadow-sky-200 hover:bg-sky-400 sm:w-auto"
             >
               Thiết lập hồ sơ giáo viên →
             </Link>
