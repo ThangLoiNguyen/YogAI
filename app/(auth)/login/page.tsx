@@ -8,15 +8,13 @@ export default function LoginPage() {
 
   return (
     <div className="min-h-screen bg-sky-50 text-slate-900">
-      <div className="mx-auto flex min-h-screen max-w-5xl flex-col items-center justify-center px-4 py-10">
-        <div className="mb-8 text-center">
-          <Link href="/" className="inline-flex items-center gap-2">
-            <span className="rounded-full bg-sky-100 px-2 py-1 text-xs font-semibold text-sky-700">
-              YOGAI
-            </span>
-            <span className="text-sm text-slate-600">
-              Nền tảng yoga cho giáo viên & học viên
-            </span>
+      <div className="mx-auto flex min-h-screen max-w-4xl flex-col justify-center px-4 py-10">
+        <div className="mb-6">
+          <Link
+            href="/"
+            className="text-xs text-slate-600 underline-offset-4 hover:text-sky-700 hover:underline"
+          >
+            ← Quay lại trang chủ
           </Link>
         </div>
 
@@ -29,37 +27,34 @@ export default function LoginPage() {
               <h1 className="mt-2 text-2xl font-semibold">
                 Quản lý hành trình yoga của bạn
               </h1>
-                <p className="mt-2 text-sm text-slate-600">
-                  Một tài khoản cho cả học viên và giáo viên. Chọn vai trò chính
-                  để tối ưu trải nghiệm bảng điều khiển.
-                </p>
+              <p className="mt-2 text-sm text-slate-600">
+                Một tài khoản cho cả học viên và giáo viên. Chọn vai trò chính
+                để tối ưu trải nghiệm bảng điều khiển.
+              </p>
             </div>
 
             <div className="relative inline-flex gap-2 overflow-hidden rounded-full bg-sky-50 p-1 text-xs">
               <div
-                className={`absolute inset-y-1 w-1/2 rounded-full bg-white shadow-sm shadow-sky-100 transition-transform duration-300 ${
-                  role === "student" ? "translate-x-0" : "translate-x-full"
-                }`}
+                className={`absolute inset-y-1 w-1/2 rounded-full bg-white shadow-sm shadow-sky-100 transition-transform duration-300 ${role === "student" ? "translate-x-0" : "translate-x-full"
+                  }`}
               />
               <button
                 type="button"
                 onClick={() => setRole("student")}
-                className={`relative z-10 flex-1 rounded-full px-3 py-1.5 font-medium transition-colors duration-200 ${
-                  role === "student"
+                className={`relative z-10 flex-1 rounded-full px-3 py-1.5 font-medium transition-colors duration-200 ${role === "student"
                     ? "text-sky-700"
                     : "text-slate-500 hover:text-sky-700"
-                }`}
+                  }`}
               >
                 Tôi là học viên
               </button>
               <button
                 type="button"
                 onClick={() => setRole("teacher")}
-                className={`relative z-10 flex-1 rounded-full px-3 py-1.5 font-medium transition-colors duration-200 ${
-                  role === "teacher"
+                className={`relative z-10 flex-1 rounded-full px-3 py-1.5 font-medium transition-colors duration-200 ${role === "teacher"
                     ? "text-sky-700"
                     : "text-slate-500 hover:text-sky-700"
-                }`}
+                  }`}
               >
                 Tôi là giáo viên
               </button>
