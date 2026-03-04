@@ -35,15 +35,15 @@ export default function LoginPage() {
 
             <div className="relative inline-flex gap-2 overflow-hidden rounded-full bg-sky-50 p-1 text-xs">
               <div
-                className={`absolute inset-y-1 w-1/2 rounded-full bg-white shadow-sm shadow-sky-100 transition-transform duration-300 ${role === "student" ? "translate-x-0" : "translate-x-full"
+                className={`absolute inset-y-1 w-1/2 rounded-full bg-white shadow-sm shadow-sky-100 transition-transform duration-300 ${role === "student" ? "translate-x-0" : "translate-x-[90%]"
                   }`}
               />
               <button
                 type="button"
                 onClick={() => setRole("student")}
                 className={`relative z-10 flex-1 rounded-full px-3 py-1.5 font-medium transition-colors duration-200 ${role === "student"
-                    ? "text-sky-700"
-                    : "text-slate-500 hover:text-sky-700"
+                  ? "text-sky-700"
+                  : "text-slate-500 hover:text-sky-700"
                   }`}
               >
                 Tôi là học viên
@@ -51,9 +51,9 @@ export default function LoginPage() {
               <button
                 type="button"
                 onClick={() => setRole("teacher")}
-                className={`relative z-10 flex-1 rounded-full px-3 py-1.5 font-medium transition-colors duration-200 ${role === "teacher"
-                    ? "text-sky-700"
-                    : "text-slate-500 hover:text-sky-700"
+                className={`relative z-10 flex-1.5 rounded-full px-3 py-1.5 font-medium transition-colors duration-200 ${role === "teacher"
+                  ? "text-sky-700"
+                  : "text-slate-500 hover:text-sky-700"
                   }`}
               >
                 Tôi là giáo viên
