@@ -39,8 +39,9 @@ export function DashboardShell({ role, children }: DashboardShellProps) {
   };
 
   return (
-    <div className="flex min-h-screen bg-sky-50 text-slate-900">
-      <aside className="hidden w-60 flex-col border-r border-sky-100 bg-white/80 px-4 py-5 shadow-sm shadow-sky-100 md:flex">
+    <div className="flex h-screen overflow-hidden bg-sky-50 text-slate-900">
+      {/* Sidebar cố định bên trái trên desktop */}
+      <aside className="fixed inset-y-0 left-0 z-30 hidden w-60 flex-col border-r border-sky-100 bg-white/80 px-4 py-5 shadow-sm shadow-sky-100 md:flex">
         <nav className="space-y-1 text-sm">
           {navItems.map((item) => {
             const active = pathname === item.href;
@@ -98,8 +99,10 @@ export function DashboardShell({ role, children }: DashboardShellProps) {
         </button>
       </aside>
 
-      <main className="flex-1">
-        <div className="relative z-20 border-b border-sky-100 bg-white/80 shadow-sm shadow-sky-100">
+      {/* Khu vực nội dung: chừa khoảng trống cho sidebar trên desktop */}
+      <main className="flex h-screen flex-1 flex-col">
+        {/* Header fixed trên cùng, nối liền với sidebar */}
+        <div className="fixed top-0 left-0 right-0 z-20 border-b border-sky-100 bg-white/80 shadow-sm shadow-sky-100 backdrop-blur md:ml-60">
           <header className="flex items-center justify-between px-4 py-3 md:px-6">
             <div className="flex items-center gap-3">
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-sky-700">
@@ -143,69 +146,86 @@ export function DashboardShell({ role, children }: DashboardShellProps) {
             </div>
           </header>
 
-          {/* Nav mobile trong dashboard - overlay, không đẩy body xuống */}
-          {isMobileNavOpen && (
-            <nav className="absolute inset-x-4 top-full mt-2 flex flex-col gap-2 rounded-2xl border border-sky-100 bg-white/95 p-3 text-sm text-slate-800 shadow-lg ring-1 ring-sky-100 md:hidden">
-              {navItems.map((item) => {
-                const active = pathname === item.href;
-                return (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    onClick={() => setIsMobileNavOpen(false)}
-                    className={`rounded-full px-3 py-2 text-sm ${
-                      active
-                        ? "bg-sky-500 text-white shadow-sm shadow-sky-200"
-                        : "text-slate-700 hover:bg-sky-50"
-                    }`}
-                  >
-                    {item.label}
-                  </Link>
-                );
-              })}
-              <Link
-                href="/"
-                onClick={() => setIsMobileNavOpen(false)}
-                className="mt-1 inline-flex items-center justify-center gap-2 rounded-full border border-sky-200 bg-white px-3 py-2 text-[14px] font-semibold text-sky-700 shadow-sm hover:bg-sky-50"
-              >
-                <svg
-                  className="h-4 w-4"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
+          {/* Nav mobile trong dashboard - overlay, có hiệu ứng fade/slide */}
+          <nav
+            className={`absolute inset-x-4 top-full mt-2 flex flex-col gap-2 rounded-2xl border border-sky-100 bg-white/95 p-3 text-sm text-slate-800 shadow-lg ring-1 ring-sky-100 transition-all duration-200 md:hidden ${
+              isMobileNavOpen
+                ? "z-20 translate-y-0 opacity-100 pointer-events-auto"
+                : "z-[-1] -translate-y-2 opacity-0 pointer-events-none"
+            }`}
+          >
+            {navItems.map((item) => {
+              const active = pathname === item.href;
+              return (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setIsMobileNavOpen(false)}
+                  className={`rounded-full px-3 py-2 text-sm ${
+                    active
+                      ? "bg-sky-500 text-white shadow-sm shadow-sky-200"
+                      : "text-slate-700 hover:bg-sky-50"
+                  }`}
                 >
-                  <path
-                    d="M4 11L12 4L20 11V19C20 19.5523 19.5523 20 19 20H5C4.44772 20 4 19.5523 4 19V11Z"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                  <path
-                    d="M10 20V13H14V20"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-                <span>Trang chính</span>
-              </Link>
-              <button
-                type="button"
-                onClick={() => {
-                  setIsMobileNavOpen(false);
-                  handleLogout();
-                }}
-                className="rounded-full bg-sky-50 px-3 py-2 text-xs text-slate-600 ring-1 ring-sky-100 hover:bg-sky-100"
+                  {item.label}
+                </Link>
+              );
+            })}
+            <Link
+              href="/"
+              onClick={() => setIsMobileNavOpen(false)}
+              className="mt-1 inline-flex items-center justify-center gap-2 rounded-full border border-sky-200 bg-white px-3 py-2 text-[14px] font-semibold text-sky-700 shadow-sm hover:bg-sky-50"
+            >
+              <svg
+                className="h-4 w-4"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
               >
-                Đăng xuất
-              </button>
-            </nav>
-          )}
+                <path
+                  d="M4 11L12 4L20 11V19C20 19.5523 19.5523 20 19 20H5C4.44772 20 4 19.5523 4 19V11Z"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+                <path
+                  d="M10 20V13H14V20"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+              <span>Trang chính</span>
+            </Link>
+            <button
+              type="button"
+              onClick={() => {
+                setIsMobileNavOpen(false);
+                handleLogout();
+              }}
+              className="rounded-full bg-sky-50 px-3 py-2 text-xs text-slate-600 ring-1 ring-sky-100 hover:bg-sky-100"
+            >
+              Đăng xuất
+            </button>
+          </nav>
         </div>
 
-        <div className="px-4 py-6 md:px-6 md:py-8">{children}</div>
+        {/* Overlay mờ cho mobile; bấm vào mọi vùng body để đóng menu */}
+        {isMobileNavOpen && (
+          <button
+            type="button"
+            aria-label="Đóng menu điều hướng"
+            onClick={() => setIsMobileNavOpen(false)}
+            className="fixed inset-0 z-10 bg-slate-900/10 backdrop-blur-[1px] md:hidden"
+          />
+        )}
+
+        {/* Nội dung scroll bên trong, nav & header giữ cố định */}
+        <div className="flex-1 overflow-y-auto px-4 pb-6 pt-16 md:px-6 md:pb-8">
+          {children}
+        </div>
       </main>
     </div>
   );

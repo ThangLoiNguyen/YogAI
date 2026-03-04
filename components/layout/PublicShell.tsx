@@ -119,48 +119,62 @@ export function PublicShell({ children }: Props) {
             </nav>
           </div>
 
-          {/* Menu dropdown trên mobile - overlay, không đẩy body xuống */}
-          {isMenuOpen && (
-            <nav className="absolute inset-x-3 top-full mt-3 flex flex-col gap-2 rounded-2xl border border-sky-100 bg-white/95 p-3 text-base text-slate-800 shadow-xl ring-1 ring-sky-100 md:hidden">
-              <Link
-                href="/"
-                className={linkClasses(pathname === "/")}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Trang chủ
-              </Link>
-              <Link
-                href="/teachers"
-                className={linkClasses(pathname.startsWith("/teachers"))}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Giáo viên
-              </Link>
-              <Link
-                href="/classes"
-                className={linkClasses(pathname.startsWith("/classes"))}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Lớp học
-              </Link>
-              <Link
-                href="/blog"
-                className={linkClasses(pathname.startsWith("/blog"))}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Blog
-              </Link>
-              <Link
-                href="/pricing"
-                className={linkClasses(pathname.startsWith("/pricing"))}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Bảng giá
-              </Link>
-            </nav>
-          )}
+          {/* Menu dropdown trên mobile - overlay với hiệu ứng fade/slide */}
+          <nav
+            className={`absolute inset-x-3 top-full mt-3 flex flex-col gap-2 rounded-2xl border border-sky-100 bg-white/95 p-3 text-base text-slate-800 shadow-xl ring-1 ring-sky-100 transition-all duration-200 md:hidden ${
+              isMenuOpen
+                ? "z-20 translate-y-0 opacity-100 pointer-events-auto"
+                : "z-[-1] -translate-y-2 opacity-0 pointer-events-none"
+            }`}
+          >
+            <Link
+              href="/"
+              className={linkClasses(pathname === "/")}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Trang chủ
+            </Link>
+            <Link
+              href="/teachers"
+              className={linkClasses(pathname.startsWith("/teachers"))}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Giáo viên
+            </Link>
+            <Link
+              href="/classes"
+              className={linkClasses(pathname.startsWith("/classes"))}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Lớp học
+            </Link>
+            <Link
+              href="/blog"
+              className={linkClasses(pathname.startsWith("/blog"))}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Blog
+            </Link>
+            <Link
+              href="/pricing"
+              className={linkClasses(pathname.startsWith("/pricing"))}
+              onClick={() => setIsMenuOpen(false)}
+            >
+              Bảng giá
+            </Link>
+          </nav>
         </div>
       </header>
+
+      {/* Overlay mờ trên mobile: bấm vào mọi vùng body để đóng menu */}
+      {isMenuOpen && (
+        <button
+          type="button"
+          aria-label="Đóng menu điều hướng"
+          onClick={() => setIsMenuOpen(false)}
+          className="fixed inset-0 z-10 bg-slate-900/10 backdrop-blur-[1px] md:hidden"
+        />
+      )}
 
       <div className="pt-20">
         {children}
