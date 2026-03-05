@@ -12,3 +12,10 @@ body {
   color: var(--color-foreground);
 }
 
+button,
+[role="button"],
+a {
+  cursor: pointer;
+}
+
+

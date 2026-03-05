@@ -32,7 +32,10 @@ export default function TeacherRegisterPage() {
             </p>
           </div>
 
-          <form className="grid gap-4 md:grid-cols-2">
+          <form
+            className="grid gap-4 md:grid-cols-2"
+            onSubmit={(e) => e.preventDefault()}
+          >
             <div className="space-y-1.5 text-sm">
               <label className="block text-slate-700" htmlFor="name">
                 Họ tên
@@ -123,7 +126,7 @@ export default function TeacherRegisterPage() {
               thiết lập lịch lớp.
             </p>
             <Link
-              href="/onboarding/teacher"
+              href="/dashboard/teacher"
               className="inline-flex w-full items-center justify-center rounded-full bg-sky-500 px-5 py-2 text-sm font-semibold text-white shadow-md shadow-sky-200 hover:bg-sky-400 sm:w-auto"
             >
               Thiết lập hồ sơ giáo viên →

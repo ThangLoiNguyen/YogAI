@@ -60,7 +60,7 @@ export default function LoginPage() {
               </button>
             </div>
 
-            <form className="space-y-4">
+            <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
               <div className="space-y-1.5 text-sm">
                 <label className="block text-slate-700" htmlFor="email">
                   Email

@@ -39,9 +39,9 @@ export function DashboardShell({ role, children }: DashboardShellProps) {
   };
 
   return (
-    <div className="flex h-screen overflow-hidden bg-sky-50 text-slate-900">
+    <div className="flex min-h-screen bg-sky-50 text-slate-900">
       {/* Sidebar cố định bên trái trên desktop */}
-      <aside className="fixed inset-y-0 left-0 z-30 hidden w-60 flex-col border-r border-sky-100 bg-white/80 px-4 py-5 shadow-sm shadow-sky-100 md:flex">
+      <aside className="fixed inset-y-0 left-0 z-30 hidden w-60 flex-col border-r border-sky-100 bg-white/80 px-4 py-5 shadow-sm shadow-sky-100 xl:flex">
         <nav className="space-y-1 text-sm">
           {navItems.map((item) => {
             const active = pathname === item.href;
@@ -100,10 +100,10 @@ export function DashboardShell({ role, children }: DashboardShellProps) {
       </aside>
 
       {/* Khu vực nội dung: chừa khoảng trống cho sidebar trên desktop */}
-      <main className="flex h-screen flex-1 flex-col">
+      <main className="flex flex-1 flex-col">
         {/* Header fixed trên cùng, nối liền với sidebar */}
-        <div className="fixed top-0 left-0 right-0 z-20 border-b border-sky-100 bg-white/80 shadow-sm shadow-sky-100 backdrop-blur md:ml-60">
-          <header className="flex items-center justify-between px-4 py-3 md:px-6">
+        <div className="fixed top-0 left-0 right-0 z-20 border-b border-sky-100 bg-white/80 shadow-sm shadow-sky-100 backdrop-blur xl:ml-60">
+          <header className="flex items-center justify-between px-4 py-3 xl:px-6">
             <div className="flex items-center gap-3">
               <p className="text-xs font-semibold uppercase tracking-[0.2em] text-sky-700">
                 {role === "student"
@@ -116,7 +116,7 @@ export function DashboardShell({ role, children }: DashboardShellProps) {
               <span className="h-7 w-7 rounded-full bg-sky-100" />
               <button
                 type="button"
-                className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-sky-200 bg-white/80 text-slate-700 shadow-sm hover:bg-sky-50 md:hidden"
+                className="inline-flex h-8 w-8 items-center justify-center rounded-full border border-sky-200 bg-white/80 text-slate-700 shadow-sm hover:bg-sky-50 xl:hidden"
                 aria-label="Mở menu điều hướng bảng điều khiển"
                 onClick={() => setIsMobileNavOpen((prev) => !prev)}
               >
@@ -148,7 +148,7 @@ export function DashboardShell({ role, children }: DashboardShellProps) {
 
           {/* Nav mobile trong dashboard - overlay, có hiệu ứng fade/slide */}
           <nav
-            className={`absolute inset-x-4 top-full mt-2 flex flex-col gap-2 rounded-2xl border border-sky-100 bg-white/95 p-3 text-sm text-slate-800 shadow-lg ring-1 ring-sky-100 transition-all duration-200 md:hidden ${
+            className={`absolute inset-x-4 top-full mt-2 flex flex-col gap-2 rounded-2xl border border-sky-100 bg-white/95 p-3 text-sm text-slate-800 shadow-lg ring-1 ring-sky-100 transition-all duration-200 xl:hidden ${
               isMobileNavOpen
                 ? "z-20 translate-y-0 opacity-100 pointer-events-auto"
                 : "z-[-1] -translate-y-2 opacity-0 pointer-events-none"
@@ -218,12 +218,12 @@ export function DashboardShell({ role, children }: DashboardShellProps) {
             type="button"
             aria-label="Đóng menu điều hướng"
             onClick={() => setIsMobileNavOpen(false)}
-            className="fixed inset-0 z-10 bg-slate-900/10 backdrop-blur-[1px] md:hidden"
+            className="fixed inset-0 z-10 bg-slate-900/10 backdrop-blur-[1px] xl:hidden"
           />
         )}
 
         {/* Nội dung scroll bên trong, nav & header giữ cố định */}
-        <div className="flex-1 overflow-y-auto px-4 pb-6 pt-16 md:px-6 md:pb-8">
+        <div className="flex-1 overflow-y-auto px-4 pb-6 pt-16 xl:px-4 xl:pl-24 xl:pb-8">
           {children}
         </div>
       </main>
